@@ -1,0 +1,17 @@
+body {
+  background-color: lightgray;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  box-shadow: darkgrey 0px 0px 10px;
+  border-radius: 5px;
+  margin: 0px 50px;
+}
+
+.main-container > * {
+  margin: 5px 0px;
+}
