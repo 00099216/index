@@ -85,3 +85,15 @@ function eventWrapper(decryptVal=false) {
 
 encryptBtn.addEventListener('click', (evt) => eventWrapper());
 decryptBtn.addEventListener('click', (evt) => eventWrapper(true));
+
+document.addEventListener("DOMContentLoaded", function() {
+  var inputs = document.querySelectorAll('[readonly]');
+  for(var i=0; i < inputs.length; i++){
+    inputs[i].addEventListener('keydown', function(e){
+      var key = e.which || e.keyCode || 0;
+      if(key === 8){
+        e.preventDefault();
+      }
+    })
+  }
+});
